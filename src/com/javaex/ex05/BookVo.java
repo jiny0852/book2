@@ -1,6 +1,6 @@
-package com.javaex.ex02;
+package com.javaex.ex05;
 
-public class BookVO {
+public class BookVo {
 
 	//필드
 	private int bookId;
@@ -11,10 +11,10 @@ public class BookVO {
 	
 	
 	//생성자
-	public BookVO() {
+	public BookVo() {
 		
 	}
-	public BookVO(int bookId, String title, String pubs, String pub_date, int author_id) {
+	public BookVo(int bookId, String title, String pubs, String pub_date, int author_id) {
 		super();
 		this.bookId = bookId;
 		this.title = title;

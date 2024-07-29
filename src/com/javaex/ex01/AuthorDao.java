@@ -128,8 +128,8 @@ public class AuthorDao {
 
 			// - sql문 준비
 			String query = "";
-			query += " delete from book ";
-			query += " where book_id = ? ";
+			query += " delete from author ";
+			query += " where author_id = ? ";
 
 			// - 바인딩
 			pstmt = conn.prepareStatement(query);
