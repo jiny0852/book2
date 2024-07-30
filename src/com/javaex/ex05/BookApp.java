@@ -30,8 +30,9 @@ public class BookApp {
 		//BookVo bookVo = bookDao.selectOneBook(15);
 		//System.out.println(bookVo);
 		
-		
-		List<BookVo> bookList2 = bookDao.serch();
+		//검색
+		//List<BookVo> bookList2 = bookDao.serch();
+		//System.out.println(bookList2);
 		
 
 	}

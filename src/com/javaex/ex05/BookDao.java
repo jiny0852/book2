@@ -443,12 +443,16 @@ public class BookDao {
 			query += " 			pubs, ";
 			query += " 			pub_date, ";
 			query += " 			author_id ";
-			query += " from book ";
-			query += " where contains(book, '?') ";
+			query += " from book  ";
+			query += " where title like '%' ? '%'  ";
+			query += " or pubs like '%' ? '%'   ";
+			query += " or pub_date like '%' ? '%'  ";
 
 			// - 바인딩
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, str);
+			pstmt.setString(2, str);
+			pstmt.setString(3, str);
 			
 
 			// - 실행
@@ -470,7 +474,6 @@ public class BookDao {
 				BookVo bookVo = new BookVo(bookId, title, pubs, pubDate, authorId);
 				bookList.add(bookVo);
 				
-				System.out.println("title : " + title);
 				
 				count++;
 				
